@@ -1,2 +1,2 @@
-export const appName = 'Front-end boilerplate'
-export const appDescription = 'Front-end boilerplate for Nuxt.js, Vite, and TypeScript'
+export const appName = 'Technical assignment'
+export const appDescription = 'Technical assignment for Visma ProActive.'
