@@ -32,6 +32,6 @@ const currentOverview = computed(() => {
       </div>
     </div>
 
-    <component :is="currentOverview" />
+    <component :is="currentOverview" :data="data" />
   </div>
 </template>
