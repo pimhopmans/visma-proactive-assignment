@@ -25,7 +25,7 @@ pokemonDetails.value = await Promise.all(detailsPromises)
 
 <template>
   <div class="py-8">
-    <UContainer :ui="{ constrained: 'max-w-3xl' }">
+    <UContainer :ui="{ constrained: 'max-w-5xl' }">
       <ContentOverview title="Pokémon" :data="pokemonDetails" />
     </UContainer>
   </div>
