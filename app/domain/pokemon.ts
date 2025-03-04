@@ -8,6 +8,7 @@ export interface PokemonData {
 }
 
 export interface PokemonDetails {
+  id: number
   sprites: {
     front_default: string
   }

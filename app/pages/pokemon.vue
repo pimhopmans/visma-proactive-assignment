@@ -15,6 +15,7 @@ const detailsPromises = pokemon.value.map(async (pokemon) => {
   const { data } = await usePokemonData(`pokemon/${pokemon.name}`) as { data: { value: PokemonDetails } }
 
   const pokemonDetails: OverviewItem = {
+    id: data.value.id,
     name: pokemon.name,
     sprite: data.value.sprites.front_default,
   }
