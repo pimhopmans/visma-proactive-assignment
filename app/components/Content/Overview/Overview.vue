@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import type { OverviewItem } from '~/domain/content'
 import OverviewGrid from '@/components/Content/Overview/Grid.vue'
 import OverviewList from '@/components/Content/Overview/List.vue'
 import { ref } from 'vue'
 
 const props = defineProps<{
   title: string
-  data: unknown
+  data: OverviewItem[]
 }>()
 
 const overviewType = ref('list') // default to list overview
