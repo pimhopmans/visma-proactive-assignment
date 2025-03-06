@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PokemonData } from '~/domain/pokemon'
+import { removeSpecialCharacters } from '~/lib/string'
 
 const props = defineProps<{
   data: PokemonData
@@ -34,7 +35,7 @@ const types = props.data.types.map(type => type.type.name).join(', ')
 
         <div class="flex flex-col flex-1 space-y-2">
           <span v-for="entry in props.data.stats" :key="entry.stat.name">
-            <strong>{{ entry.stat.name }}:</strong> {{ entry.base_stat }}
+            <strong>{{ removeSpecialCharacters(entry.stat.name) }}:</strong> {{ entry.base_stat }}
           </span>
         </div>
       </div>
