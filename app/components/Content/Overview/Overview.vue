@@ -26,10 +26,18 @@ const currentOverview = computed(() => {
       </span>
 
       <div class="border border-zinc-600 rounded font-medium text-base text-gray-200">
-        <button class="border-r border-zinc-600 rounded py-2 px-4 hover:bg-zinc-400" @click="overviewType = 'list'">
+        <button
+          class="border-r border-zinc-600 rounded py-2 px-4 hover:bg-zinc-400"
+          :class="{ underline: overviewType === 'list' }"
+          @click="overviewType = 'list'"
+        >
           List
         </button>
-        <button class="rounded py-2 px-4 hover:bg-zinc-400" @click="overviewType = 'grid'">
+        <button
+          class="rounded py-2 px-4 hover:bg-zinc-400"
+          :class="{ underline: overviewType === 'grid' }"
+          @click="overviewType = 'grid'"
+        >
           Grid
         </button>
       </div>
