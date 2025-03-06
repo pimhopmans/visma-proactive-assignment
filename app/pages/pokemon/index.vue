@@ -52,7 +52,7 @@ async function fetchPokemonDetails(pokemon: Pokemon[]) {
 
     const pokemonDetails: OverviewItem = {
       id: data.value.id,
-      name: pokemon.name,
+      name: `#${data.value.id}: ${pokemon.name}`, // Add Pokémon ID to the name
       sprite: data.value.sprites.front_default,
     }
     return pokemonDetails
