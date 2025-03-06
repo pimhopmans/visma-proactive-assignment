@@ -3,3 +3,9 @@ export interface PokemonDetailsRoute {
     name: string
   }
 }
+
+export interface RickAndMortyDetailsRoute {
+  params: {
+    id: string
+  }
+}

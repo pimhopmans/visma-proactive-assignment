@@ -52,6 +52,7 @@ function transformRickAndMortyResponse(characters: RickAndMortyCharacter[]): Ove
       id: character.id,
       name: character.name,
       sprite: character.image,
+      url: `/rickandmorty/${character.id}`,
     }))
 
   return transformedData

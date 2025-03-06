@@ -54,6 +54,7 @@ async function fetchPokemonDetails(pokemon: Pokemon[]) {
       id: data.value.id,
       name: `#${data.value.id}: ${pokemon.name}`, // Add Pokémon ID to the name
       sprite: data.value.sprites.front_default,
+      url: `/pokemon/${data.value.name}`,
     }
     return pokemonDetails
   })

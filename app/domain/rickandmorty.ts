@@ -12,7 +12,9 @@ export interface RickAndMortyCharacter {
   species: string
   type: string
   gender: string
-  origin: string
-  location: string
+  origin: { name: string }
+  location: {
+    name: string
+  }
   image: string
 }
