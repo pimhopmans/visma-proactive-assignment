@@ -15,7 +15,7 @@ const props = defineProps<{
             {{ item.name }}
           </span>
 
-          <img :src="item.sprite" :alt="item.name" width="144" height="144" class="rounded">
+          <img :src="item.image" :alt="item.name" width="144" height="144" class="rounded">
         </NuxtLink>
       </li>
     </ul>
