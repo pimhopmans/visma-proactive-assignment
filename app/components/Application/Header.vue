@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-zinc-700 border-b border-b-zinc-600 py-8">
+  <header class="bg-slate-800 border-b border-b-slate-700 py-8">
     <UContainer class="flex items-center">
       <nav>
         <ul class="flex gap-2">

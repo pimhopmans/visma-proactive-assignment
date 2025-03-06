@@ -19,12 +19,12 @@ const types = props.data.types.map(type => type.type.name).join(', ')
 
 <template>
   <ContentDetails :name="props.data.name" :sprite="props.data.sprites.front_default">
-    <div class="flex grow flex-col space-y-8 pr-20">
-      <h2 class="bg-zinc-700 rounded px-4 py-2">
+    <div class="max-w-[70%] flex flex-col space-y-8 pr-5">
+      <div class="bg-zinc-700 rounded px-4 py-2">
         {{ flavorText }}
-      </h2>
+      </div>
 
-      <div class="flex justify-between px-2">
+      <div class="flex justify-between px-4">
         <div class="flex flex-col flex-1 space-y-2">
           <span><strong>id:</strong> #{{ props.data.id }}</span>
           <span><strong>height:</strong> {{ props.data.height / 10 }}</span>

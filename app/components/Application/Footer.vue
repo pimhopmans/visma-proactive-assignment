@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-zinc-700 border-t border-t-zinc-600 py-8">
-    <UContainer class="text-xs">
+  <footer class="bg-slate-800 border-t border-t-slate-700 py-8">
+    <UContainer class="text-xs text-gray-200">
       Made by Pim Hopmans 👾
     </UContainer>
   </footer>

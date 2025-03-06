@@ -15,7 +15,7 @@ const router = useRouter()
       </button>
     </div>
 
-    <h1 class="capitalize text-3xl font-medium text-gray-200">
+    <h1 class="capitalize text-3xl font-bold text-gray-200">
       {{ props.name }}
     </h1>
 
