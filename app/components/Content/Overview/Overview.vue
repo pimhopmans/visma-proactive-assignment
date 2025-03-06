@@ -7,6 +7,8 @@ import { ref } from 'vue'
 const props = defineProps<{
   title: string
   data: OverviewItem[]
+  isLoading: boolean
+  fetchNextData: () => void
 }>()
 
 const overviewType = ref('list') // default to list overview
@@ -34,5 +36,12 @@ const currentOverview = computed(() => {
     </div>
 
     <component :is="currentOverview" :data="data" />
+
+    <div class="h-20 flex justify-center items-center text-sm font-medium text-gray-200 p-4">
+      <LoadingSpinner v-if="isLoading" />
+      <button v-else class="hover:underline" @click="fetchNextData">
+        Load more
+      </button>
+    </div>
   </div>
 </template>

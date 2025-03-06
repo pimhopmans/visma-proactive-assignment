@@ -1,4 +1,5 @@
-export interface PokemonResults {
+export interface PokemonResponse {
+  next: string
   results: Pokemon[]
 }
 
