@@ -4,13 +4,15 @@ import type { OverviewItem } from '~/domain/content'
 import type { RickAndMortyCharacter, RickAndMortyResponse } from '~/domain/rickandmorty'
 
 // States
-const characters = ref<OverviewItem[]>([])
-const nextUrl = ref<string>('')
-const isLoading = ref<boolean>(false)
+const characters = useState<OverviewItem[]>('characters', () => [])
+const nextUrl = useState<string>('nextUrl', () => '')
+const isLoading = useState<boolean>('isLoading', () => false)
 
 // Fetch the initial list of characters
 async function initialLoad() {
-  fetchCharacters('character')
+  if (characters.value.length === 0) {
+    fetchCharacters('character')
+  }
 }
 
 // Load more characters

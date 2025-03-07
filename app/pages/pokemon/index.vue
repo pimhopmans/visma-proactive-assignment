@@ -4,13 +4,15 @@ import type { OverviewItem } from '~/domain/content'
 import type { Pokemon, PokemonDetails, PokemonResponse } from '~/domain/pokemon'
 
 // States
-const pokemon = ref<OverviewItem[]>([])
-const nextUrl = ref<string>('')
-const isLoading = ref<boolean>(false)
+const pokemon = useState<OverviewItem[]>('pokemon', () => [])
+const nextUrl = useState<string>('nextUrl', () => '')
+const isLoading = useState<boolean>('isLoading', () => false)
 
 // Fetch the initial list of Pokémon
 async function initialLoad() {
-  fetchPokemon('pokemon')
+  if (pokemon.value.length === 0) {
+    fetchPokemon('pokemon')
+  }
 }
 
 // Load more Pokémon

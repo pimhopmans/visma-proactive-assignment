@@ -2,7 +2,6 @@
 import type { OverviewItem } from '~/domain/content'
 import OverviewGrid from '@/components/Content/Overview/Grid.vue'
 import OverviewList from '@/components/Content/Overview/List.vue'
-import { ref } from 'vue'
 
 const props = defineProps<{
   title: string
@@ -11,7 +10,7 @@ const props = defineProps<{
   fetchNextData: () => void
 }>()
 
-const overviewType = ref('list') // default to list overview
+const overviewType = useState('overviewType', () => 'list') // default to list overview
 
 const currentOverview = computed(() => {
   return overviewType.value === 'list' ? OverviewList : OverviewGrid
